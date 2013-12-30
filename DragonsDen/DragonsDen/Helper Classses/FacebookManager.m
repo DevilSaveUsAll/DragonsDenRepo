@@ -15,7 +15,7 @@
 
 - (void) login {
   NSArray *permissions = [NSArray arrayWithObjects:@"publish_stream", nil];
-  [FBSession openActiveSessionWithPublishPermissions:permissions defaultAudience:FBSessionDefaultAudienceEveryone allowLoginUI:NO completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+  [FBSession openActiveSessionWithPublishPermissions:permissions defaultAudience:FBSessionDefaultAudienceEveryone allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
     if (!error) {
       if (session) {
         //call some sucess method, like sending even to server
@@ -24,6 +24,7 @@
         if ([self.delegate respondsToSelector:@selector(facebookLoginSucess)]) {
           [self.delegate facebookLoginSucess];
           if (postTowall) {
+            postTowall = NO;
             [self postToWall];
           }
         }
@@ -46,13 +47,55 @@
 }
 
 - (void)postToWall {
-  postTowall = YES;
   if (FBSession.activeSession.isOpen) {
+    // Check if the Facebook app is installed and we can present the share dialog
+    FBShareDialogParams *params = [[FBShareDialogParams alloc] init];
+    params.link = [NSURL URLWithString:@"https://developers.facebook.com/docs/ios/share/"];
+    params.name = @"Sharing Tutorial";
+    params.caption = @"Build great social apps and get more installs.";
+    params.picture = [NSURL URLWithString:@"http://i.imgur.com/g3Qc1HN.png"];
+    params.description = @"Allow your users to share stories on Facebook from your app using the iOS SDK.";
     
+    // If the Facebook app is installed and we can present the share dialog
+    if ([FBDialogs canPresentShareDialogWithParams:params]) {
+      [FBDialogs presentShareDialogWithLink:params.link
+                                       name:params.name
+                                    caption:params.caption
+                                description:params.description
+                                    picture:params.picture
+                                clientState:nil
+                                    handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                      if(error) {
+                                        // An error occurred, we need to handle the error
+                                      } else {
+                                        // Success
+                                        NSLog(@"result %@", results);
+                                      }
+                                    }];
+    } else {
+      // Present the feed dialog
+    }
   }
   else {
+    postTowall = YES;
     [self login];
   }
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+  
+  BOOL urlWasHandled = [FBAppCall handleOpenURL:url
+                              sourceApplication:sourceApplication
+                                fallbackHandler:^(FBAppCall *call) {
+                                  NSLog(@"Unhandled deep link: %@", url);
+                                  // Here goes the code to handle the links
+                                  // Use the links to show a relevant view of your app to the user
+                                }];
+  
+  return urlWasHandled;
 }
 
 - (void)like {

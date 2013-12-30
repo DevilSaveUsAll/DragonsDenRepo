@@ -20,39 +20,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"Music"];
-  if (!musicOn) [self.musicButton setImage:[UIImage imageNamed:@"MusicNoteOFF.png"] forState:UIControlStateNormal];
-}
-
-- (void)viewWillLayoutSubviews {
-  [super viewWillLayoutSubviews];
-  
-  NSMutableArray *tempArray = [NSMutableArray array];
-  SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"CoinNormal"];
-  NSUInteger numImage = atlas.textureNames.count;
-  for (int i = 0; i < numImage; i++) {
-    NSString *textureName = [NSString stringWithFormat:@"Coin%0.2d",i];
-    SKTexture *temp = [atlas textureNamed:textureName];
-    [tempArray addObject:temp];
-  }
-  SKView *skView = (SKView *)self.view;
-  if (!skView.scene) {
-    [SKTexture preloadTextures:tempArray withCompletionHandler:^{
-      
-      for (UIView *view in self.view.subviews) {
-        if (view.hidden) {
-          view.hidden = NO;
-        }
-      }
-      
-      self.gameScene = [[GameScene alloc] initWithSize:CGSizeMake(568, 320)];
-      self.gameScene.scaleMode = SKSceneScaleModeAspectFill;
-      self.gameScene.delegate = self;
-      [self.gameScene addCoinFrame:tempArray];
-      [skView presentScene:self.gameScene.scene];
-    }];
-  }
-  self.pauseScreen.delegate = self;
   
   UISwipeGestureRecognizer *gesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedLeft)];
   gesture.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -69,6 +36,20 @@
   gesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedUp)];
   gesture.direction = UISwipeGestureRecognizerDirectionUp;
   [self.view addGestureRecognizer:gesture];
+}
+
+- (void)viewWillLayoutSubviews {
+  [super viewWillLayoutSubviews];
+  
+  SKView *skView = (SKView *)self.view;
+  if (!skView.scene) {
+    self.gameScene = [[GameScene alloc] initWithSize:CGSizeMake(568, 320)];
+    self.gameScene.scaleMode = SKSceneScaleModeAspectFill;
+    self.gameScene.delegate = self;
+    [skView presentScene:self.gameScene.scene];
+  }
+  
+  self.pauseScreen.delegate = self;
 }
 
 - (void)swipedLeft {
@@ -94,41 +75,7 @@
   [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (IBAction)musicClicked:(id)sender {
-  BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"Music"];
-  
-  if (musicOn) {
-    [self.musicButton setImage:[UIImage imageNamed:@"MusicNoteOFF.png"] forState:UIControlStateNormal];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Music"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [[Sound sharedSound] stopMusic];
-  }
-  else {
-    [self.musicButton setImage:[UIImage imageNamed:@"MusicNoteON.png"] forState:UIControlStateNormal];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Music"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [[Sound sharedSound] playNextSong];
-  }
-}
-
-- (IBAction)pauseClicked:(id)sender {
-  SKView *skView = (SKView *)self.view;
-  [skView addSubview:self.pauseScreen];
-  [self.gameScene pauseGame];
-}
-
 #pragma mark - GameSceneDelegate
-
-- (void)updateDistance {
-  
-}
-
-- (void)updateGold:(Coin *)coin {
-  GameState *gs = [GameState sharedGameState];
-  gs.gold += coin.goldValue;
-  [[Globals sharedGlobals] updateGold];
-  self.goldLabel.text = [NSString stringWithFormat:@"%d",gs.gold];
-}
 
 - (void)restartGame {
   [self.gameScene removeAllChildren];
@@ -154,6 +101,13 @@
   [alert show];
 }
 
+- (void)pauseGame {
+  if (self.gameScene.dead) return;
+  SKView *skView = (SKView *)self.view;
+  [skView addSubview:self.pauseScreen];
+  [self.gameScene pauseGame];
+}
+
 #pragma mark - PauseDelegate
 
 - (void)resume {
@@ -170,16 +124,18 @@
 #pragma mark - Powerup Methods
 
 - (IBAction)useSlow:(id)sender {
+  if (self.gameScene.dead) return;
   [self.gameScene useSlow];
 }
 
 - (IBAction)useArmor:(id)sender {
+  if (self.gameScene.dead) return;
   [self.gameScene useArmor];
 }
 
 - (IBAction)useMayhem:(id)sender {
+  if (self.gameScene.dead) return;
   [self.gameScene useMayhem];
 }
-
 
 @end

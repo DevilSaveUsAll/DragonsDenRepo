@@ -13,7 +13,7 @@
 
 #define SPEEDING_FRAME 0.02f
 #define GLIDING_FRAME 0.01f
-#define FLAPPING_FRAME 0.03F
+#define FLAPPING_FRAME 0.03f
 
 - (id)init {
   if ((self = [super init])) {
@@ -57,12 +57,14 @@
         break;
         
       case kSpeed:
-        [self.dragon runAction:[SKAction animateWithTextures:armorSpeedFrames timePerFrame:SPEEDING_FRAME resize:NO restore:YES] withKey:@"normalSpeed"];
+        [self.dragon runAction:[SKAction animateWithTextures:normalSpeedFrames timePerFrame:SPEEDING_FRAME resize:NO restore:YES] withKey:@"normalSpeed"];
         currentAction = @"normalSpeed";
         break;
         
       case kDied:
-        [self.dragon runAction:[SKAction animateWithTextures:particleFrames timePerFrame:0.1f resize:NO restore:NO] withKey:@"Particle"];
+        [self.dragon runAction:[SKAction animateWithTextures:particleFrames timePerFrame:0.1f resize:NO restore:NO] completion:^{
+          [self.dragon removeFromParent];
+        }];
         smokeSprite.hidden = NO;
         smokeSprite.position = self.dragon.position;
         [smokeSprite runAction:[SKAction animateWithTextures:smokeFrames timePerFrame:0.01f resize:NO restore:NO] withKey:@"Smoke"];
@@ -73,9 +75,6 @@
   else if (self.powerUpState == kArmor) {
     switch (flyingState) {
       case kIdle:
-        [self.dragon removeActionForKey:currentAction];
-        break;
-        
       case kFlapping:
         [self.dragon runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:armoredFlappingFrames timePerFrame:FLAPPING_FRAME resize:NO restore:YES]] withKey:@"armorflap"];
         currentAction = @"armorflap";
@@ -103,9 +102,6 @@
   else if (self.powerUpState == kMayhem) {
     switch (flyingState) {
       case kIdle:
-        [self.dragon removeActionForKey:currentAction];
-        break;
-        
       case kFlapping:
         [self.dragon runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:mayhemFlappingFrames timePerFrame:FLAPPING_FRAME resize:NO restore:YES]] withKey:@"mayhemFlap"];
         currentAction = @"mayhemFlap";

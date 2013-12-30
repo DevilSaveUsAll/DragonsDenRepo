@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import <AudioToolbox/AudioServices.h>
 
 typedef enum {
   kBatDeath = 1,
@@ -27,7 +28,9 @@ typedef enum {
   kSongThree,
 }SongType;
 
-@interface Sound : SKNode <AVAudioPlayerDelegate>
+@interface Sound : SKNode <AVAudioPlayerDelegate> {
+  SystemSoundID soundID;
+}
 
 + (Sound *)sharedSound;
 

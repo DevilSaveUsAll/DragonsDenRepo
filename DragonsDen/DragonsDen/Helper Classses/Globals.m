@@ -48,7 +48,7 @@
       break;
       
     case kNormalSpeed:
-      stateString = @"NormalGlide";
+      stateString = @"NormalSpeed";
       break;
       
     case kArmorSpeed:

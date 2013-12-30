@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D57CE46D-ABED-4F8A-97ED-D1FC8919D2DF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DragonsDen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F8899CCB-3CF9-4603-8CB9-6ACC19E309DB</key>
+		<string>https://github.com/DevilSaveUsAll/DragonsDenRepo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DragonsDen/DragonsDen.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F8899CCB-3CF9-4603-8CB9-6ACC19E309DB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DevilSaveUsAll/DragonsDenRepo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F8899CCB-3CF9-4603-8CB9-6ACC19E309DB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8899CCB-3CF9-4603-8CB9-6ACC19E309DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DragonsDenRepo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

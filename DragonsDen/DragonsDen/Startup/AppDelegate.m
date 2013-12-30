@@ -7,12 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "Definitions.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+  BOOL firstTime = [[NSUserDefaults standardUserDefaults] boolForKey:First_Time];
+  
+  if (!firstTime) {
+    [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:MayhemCount];
+    [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:SlowCount];
+    [[NSUserDefaults standardUserDefaults] setInteger:5 forKey:ArmorCount];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:Music];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:First_Time];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
+  
   return YES;
 }
 							

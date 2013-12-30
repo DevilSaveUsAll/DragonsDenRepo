@@ -23,6 +23,9 @@ typedef enum  {
 @property (nonatomic) ForeGroundType currentPiece;
 @property (nonatomic, strong) SKSpriteNode *foreground;
 @property (nonatomic, strong) NSMutableArray *coinFrames;
+@property (nonatomic, strong) NSMutableArray *batFrames;
+@property (nonatomic, strong) NSMutableArray *deathFrames;
 
-- (id)initWithCurrentPiece:(ForeGroundType)type andCoinFrames:(NSMutableArray *)coinFrames;
+- (id)initWithCurrentPiece:(ForeGroundType)type andCoinFrames:(NSMutableArray *)coinFrames batFrames:(NSMutableArray *)batFrames deathFrames:(NSMutableArray *)deathFrames;
+
 @end

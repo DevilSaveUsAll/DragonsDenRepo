@@ -11,10 +11,10 @@
 		061495C318588EE800F84200 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 061495C118588EE800F84200 /* Icon@2x.png */; };
 		061F118A185141E000618377 /* Foregrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F1189185141E000618377 /* Foregrounds.m */; };
 		061F11EE1851B9A100618377 /* Stalactite.png in Resources */ = {isa = PBXBuildFile; fileRef = 061F11E61851B9A100618377 /* Stalactite.png */; };
-		0649C7CC1845866B00F520A0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CA3F6A183EABFA00DDB104 /* Main_iPhone.storyboard */; };
-		0649C7CD1845866B00F520A0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CA3F68183EABFA00DDB104 /* Main_iPad.storyboard */; };
+		063A376318614009001BC710 /* StatsHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 063A376218614009001BC710 /* StatsHud.m */; };
+		063A376B1862E702001BC710 /* CollisionRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 063A376A1862E702001BC710 /* CollisionRect.m */; };
+		0645FFAA185AA98600F51597 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0645FFA8185AA97100F51597 /* FacebookSDK.framework */; };
 		065AFC2A183D549F00A04A02 /* BatAnimation.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD3183D549F00A04A02 /* BatAnimation.atlas */; };
-		065AFC2B183D549F00A04A02 /* CoinNormal.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD5183D549F00A04A02 /* CoinNormal.atlas */; };
 		065AFC2D183D549F00A04A02 /* Clock.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD8183D549F00A04A02 /* Clock.atlas */; };
 		065AFC2E183D549F00A04A02 /* ClockGlow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD9183D549F00A04A02 /* ClockGlow.atlas */; };
 		065AFC30183D549F00A04A02 /* DeathScreenMain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBDC183D549F00A04A02 /* DeathScreenMain@2x.png */; };
@@ -71,7 +71,7 @@
 		065AFC6C183D549F00A04A02 /* MusicNoteOFF@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFC27183D549F00A04A02 /* MusicNoteOFF@2x.png */; };
 		065AFC6D183D549F00A04A02 /* MusicNoteON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFC28183D549F00A04A02 /* MusicNoteON@2x.png */; };
 		065AFC6E183D549F00A04A02 /* PauseIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFC29183D549F00A04A02 /* PauseIcon@2x.png */; };
-		06901E5D185820BB00DF1E92 /* potofgold.png in Resources */ = {isa = PBXBuildFile; fileRef = 06901E5C185820BB00DF1E92 /* potofgold.png */; };
+		0667868818589802003622D9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CA3F68183EABFA00DDB104 /* Main_iPad.storyboard */; };
 		069B4BE9183EAB2B00701A1C /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069B4BBA183EAB2B00701A1C /* GameViewController.m */; };
 		069B4BEA183EAB2B00701A1C /* HowToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069B4BBC183EAB2B00701A1C /* HowToPlayViewController.m */; };
 		069B4BF1183EAB2B00701A1C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069B4BC5183EAB2B00701A1C /* MainViewController.m */; };
@@ -111,10 +111,13 @@
 		06CA3F76183EABFA00DDB104 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06CA3F6E183EABFA00DDB104 /* InfoPlist.strings */; };
 		06CA3F77183EABFA00DDB104 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CA3F70183EABFA00DDB104 /* Images.xcassets */; };
 		06CA3F78183EABFA00DDB104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CA3F71183EABFA00DDB104 /* main.m */; };
+		06CD8150186B0CDB005F901B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CA3F6A183EABFA00DDB104 /* Main_iPhone.storyboard */; };
+		06CD815B186B120A005F901B /* CoinNormal.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 06CD8159186B120A005F901B /* CoinNormal.atlas */; };
+		06CD815C186B120A005F901B /* potofgold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06CD815A186B120A005F901B /* potofgold@2x.png */; };
+		06CD815E186B1238005F901B /* Coin00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06CD815D186B1238005F901B /* Coin00@2x.png */; };
 		06D026C018557B7000CD0D11 /* ClockText@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D026BF18557B7000CD0D11 /* ClockText@2x.png */; };
 		06D026C71855926600CD0D11 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D026C61855926600CD0D11 /* FacebookManager.m */; };
 		06D026C9185592D900CD0D11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B47C8C1827292000843DFE /* UIKit.framework */; };
-		06D026CA185592E500CD0D11 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D026C1185590B700CD0D11 /* FacebookSDK.framework */; };
 		06EC431D1852C53400D4675B /* Foreground1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06EC43161852C53400D4675B /* Foreground1@2x.png */; };
 		06EC431E1852C53400D4675B /* Foreground2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06EC43171852C53400D4675B /* Foreground2@2x.png */; };
 		06EC431F1852C53400D4675B /* Foreground3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06EC43181852C53400D4675B /* Foreground3@2x.png */; };
@@ -140,8 +143,12 @@
 		061F1188185141E000618377 /* Foregrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foregrounds.h; sourceTree = "<group>"; };
 		061F1189185141E000618377 /* Foregrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foregrounds.m; sourceTree = "<group>"; };
 		061F11E61851B9A100618377 /* Stalactite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stalactite.png; sourceTree = "<group>"; };
+		063A376118614009001BC710 /* StatsHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsHud.h; sourceTree = "<group>"; };
+		063A376218614009001BC710 /* StatsHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsHud.m; sourceTree = "<group>"; };
+		063A37691862E702001BC710 /* CollisionRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionRect.h; sourceTree = "<group>"; };
+		063A376A1862E702001BC710 /* CollisionRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionRect.m; sourceTree = "<group>"; };
+		0645FFA8185AA97100F51597 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		065AFBD3183D549F00A04A02 /* BatAnimation.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BatAnimation.atlas; sourceTree = "<group>"; };
-		065AFBD5183D549F00A04A02 /* CoinNormal.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CoinNormal.atlas; sourceTree = "<group>"; };
 		065AFBD8183D549F00A04A02 /* Clock.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Clock.atlas; sourceTree = "<group>"; };
 		065AFBD9183D549F00A04A02 /* ClockGlow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ClockGlow.atlas; sourceTree = "<group>"; };
 		065AFBDC183D549F00A04A02 /* DeathScreenMain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeathScreenMain@2x.png"; sourceTree = "<group>"; };
@@ -199,7 +206,7 @@
 		065AFC27183D549F00A04A02 /* MusicNoteOFF@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicNoteOFF@2x.png"; sourceTree = "<group>"; };
 		065AFC28183D549F00A04A02 /* MusicNoteON@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicNoteON@2x.png"; sourceTree = "<group>"; };
 		065AFC29183D549F00A04A02 /* PauseIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseIcon@2x.png"; sourceTree = "<group>"; };
-		06901E5C185820BB00DF1E92 /* potofgold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = potofgold.png; sourceTree = "<group>"; };
+		06678686185893AE003622D9 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		069B4BB9183EAB2B00701A1C /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		069B4BBA183EAB2B00701A1C /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		069B4BBB183EAB2B00701A1C /* HowToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayViewController.h; sourceTree = "<group>"; };
@@ -263,8 +270,10 @@
 		06CA3F6F183EABFA00DDB104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		06CA3F70183EABFA00DDB104 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06CA3F71183EABFA00DDB104 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06CD8159186B120A005F901B /* CoinNormal.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = CoinNormal.atlas; sourceTree = "<group>"; };
+		06CD815A186B120A005F901B /* potofgold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "potofgold@2x.png"; sourceTree = "<group>"; };
+		06CD815D186B1238005F901B /* Coin00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Coin00@2x.png"; path = "DragonsDen/Resources/Coin/CoinNormal.atlas/Coin00@2x.png"; sourceTree = "<group>"; };
 		06D026BF18557B7000CD0D11 /* ClockText@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ClockText@2x.png"; sourceTree = "<group>"; };
-		06D026C1185590B700CD0D11 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		06D026C51855926600CD0D11 /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
 		06D026C61855926600CD0D11 /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
 		06EC43161852C53400D4675B /* Foreground1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Foreground1@2x.png"; sourceTree = "<group>"; };
@@ -281,7 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D026CA185592E500CD0D11 /* FacebookSDK.framework in Frameworks */,
+				0645FFAA185AA98600F51597 /* FacebookSDK.framework in Frameworks */,
 				06D026C9185592D900CD0D11 /* UIKit.framework in Frameworks */,
 				06B47C8B1827292000843DFE /* CoreGraphics.framework in Frameworks */,
 				06B47C8F1827292000843DFE /* SpriteKit.framework in Frameworks */,
@@ -317,15 +326,6 @@
 				065AFBD3183D549F00A04A02 /* BatAnimation.atlas */,
 			);
 			path = Bat;
-			sourceTree = "<group>";
-		};
-		065AFBD4183D549F00A04A02 /* Coin */ = {
-			isa = PBXGroup;
-			children = (
-				06901E5C185820BB00DF1E92 /* potofgold.png */,
-				065AFBD5183D549F00A04A02 /* CoinNormal.atlas */,
-			);
-			path = Coin;
 			sourceTree = "<group>";
 		};
 		065AFBD7183D549F00A04A02 /* DeathScreen */ = {
@@ -549,6 +549,7 @@
 				069B4BD2183EAB2B00701A1C /* SKButton.m */,
 				069B50931840022700B5AC8D /* FMMParallaxNode.h */,
 				069B50941840022700B5AC8D /* FMMParallaxNode.m */,
+				06678686185893AE003622D9 /* Definitions.h */,
 			);
 			path = "Helper Classses";
 			sourceTree = "<group>";
@@ -568,6 +569,10 @@
 				069B4BDB183EAB2B00701A1C /* PowerUp.m */,
 				069B4BDC183EAB2B00701A1C /* Sound.h */,
 				069B4BDD183EAB2B00701A1C /* Sound.m */,
+				063A376118614009001BC710 /* StatsHud.h */,
+				063A376218614009001BC710 /* StatsHud.m */,
+				063A37691862E702001BC710 /* CollisionRect.h */,
+				063A376A1862E702001BC710 /* CollisionRect.m */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 		06B47C7C1827292000843DFE = {
 			isa = PBXGroup;
 			children = (
+				06CD815D186B1238005F901B /* Coin00@2x.png */,
 				06B47C901827292000843DFE /* DragonsDen */,
 				06B47CB71827292100843DFE /* DragonsDenTests */,
 				06B47C871827292000843DFE /* Frameworks */,
@@ -626,7 +632,7 @@
 		06B47C871827292000843DFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06D026C1185590B700CD0D11 /* FacebookSDK.framework */,
+				0645FFA8185AA97100F51597 /* FacebookSDK.framework */,
 				06B47C881827292000843DFE /* Foundation.framework */,
 				06B47C8A1827292000843DFE /* CoreGraphics.framework */,
 				06B47C8C1827292000843DFE /* UIKit.framework */,
@@ -670,10 +676,10 @@
 		06B47CC81827296A00843DFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06CD8158186B120A005F901B /* Coin */,
 				061495BF18588ED600F84200 /* Icons */,
 				06C9FD25183EB70E00AD70EB /* PlayMenu */,
 				065AFBD2183D549F00A04A02 /* Bat */,
-				065AFBD4183D549F00A04A02 /* Coin */,
 				065AFBD7183D549F00A04A02 /* DeathScreen */,
 				065AFBE0183D549F00A04A02 /* Dragon */,
 				065AFBF0183D549F00A04A02 /* ForegroundPieces */,
@@ -718,6 +724,15 @@
 				06CA3F71183EABFA00DDB104 /* main.m */,
 			);
 			path = Startup;
+			sourceTree = "<group>";
+		};
+		06CD8158186B120A005F901B /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				06CD8159186B120A005F901B /* CoinNormal.atlas */,
+				06CD815A186B120A005F901B /* potofgold@2x.png */,
+			);
+			path = Coin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -796,8 +811,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0649C7CC1845866B00F520A0 /* Main_iPhone.storyboard in Resources */,
-				0649C7CD1845866B00F520A0 /* Main_iPad.storyboard in Resources */,
+				06CD815E186B1238005F901B /* Coin00@2x.png in Resources */,
+				06CD8150186B0CDB005F901B /* Main_iPhone.storyboard in Resources */,
+				0667868818589802003622D9 /* Main_iPad.storyboard in Resources */,
 				065AFC5F183D549F00A04A02 /* Collecting Gold Sound.wav in Resources */,
 				06CA3F77183EABFA00DDB104 /* Images.xcassets in Resources */,
 				065AFC64183D549F00A04A02 /* SpeedBoost Sound.wav in Resources */,
@@ -815,7 +831,6 @@
 				065AFC38183D549F00A04A02 /* NormalFlap.atlas in Resources */,
 				065AFC59183D549F00A04A02 /* 01-Mr Gelatine_ Unknown Quantity-Magnatune Compilation.wav in Resources */,
 				06EC431D1852C53400D4675B /* Foreground1@2x.png in Resources */,
-				06901E5D185820BB00DF1E92 /* potofgold.png in Resources */,
 				06C9FD37183EB70E00AD70EB /* SlowSpeedText1@2x.png in Resources */,
 				065AFC5B183D549F00A04A02 /* 08-Long Past Gone-Jami Sieber.wav in Resources */,
 				065AFC4D183D549F00A04A02 /* MainMenuBtn@2x.png in Resources */,
@@ -828,6 +843,7 @@
 				06EC43201852C53400D4675B /* Foreground4@2x.png in Resources */,
 				06C9FD38183EB70E00AD70EB /* SlowSpeedText2@2x.png in Resources */,
 				065AFC66183D549F00A04A02 /* ArmorGlow.atlas in Resources */,
+				06CD815C186B120A005F901B /* potofgold@2x.png in Resources */,
 				065AFC60183D549F00A04A02 /* DeathPoof.wav in Resources */,
 				065AFC49183D549F00A04A02 /* DragonsDenTitle@2x.png in Resources */,
 				065AFC6C183D549F00A04A02 /* MusicNoteOFF@2x.png in Resources */,
@@ -867,6 +883,7 @@
 				065AFC50183D549F00A04A02 /* BG1_2@2x.png in Resources */,
 				065AFC31183D549F00A04A02 /* FacebookShare@2x.png in Resources */,
 				065AFC4C183D549F00A04A02 /* Like Button@2x.png in Resources */,
+				06CD815B186B120A005F901B /* CoinNormal.atlas in Resources */,
 				065AFC5E183D549F00A04A02 /* ButtonClicking.wav in Resources */,
 				065AFC54183D549F00A04A02 /* TransparencyBG@2x.png in Resources */,
 				06EC431E1852C53400D4675B /* Foreground2@2x.png in Resources */,
@@ -879,7 +896,6 @@
 				06EC43221852C53400D4675B /* Foreground6@2x.png in Resources */,
 				065AFC5D183D549F00A04A02 /* BatDeath.wav in Resources */,
 				065AFC47183D549F00A04A02 /* HowToPlayScreen@2x.png in Resources */,
-				065AFC2B183D549F00A04A02 /* CoinNormal.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,9 +918,11 @@
 				069B50951840022700B5AC8D /* FMMParallaxNode.m in Sources */,
 				069B4BF6183EAB2B00701A1C /* Globals.m in Sources */,
 				069B4BFC183EAB2B00701A1C /* Sound.m in Sources */,
+				063A376B1862E702001BC710 /* CollisionRect.m in Sources */,
 				069B4BF2183EAB2B00701A1C /* PlayViewController.m in Sources */,
 				069B4BF8183EAB2B00701A1C /* Dragon.m in Sources */,
 				069B50911840020A00B5AC8D /* Bat.m in Sources */,
+				063A376318614009001BC710 /* StatsHud.m in Sources */,
 				069B4BFF183EAB2B00701A1C /* DeathScreen.m in Sources */,
 				069B4BFB183EAB2B00701A1C /* PowerUp.m in Sources */,
 				069B4C00183EAB2B00701A1C /* PauseScreen.m in Sources */,
@@ -1057,11 +1075,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/AdmiralDanny/Desktop/DragonsDen,
+					"$(SRCROOT)/DragonsDen",
+					/Users/AdmiralDanny/Dropbox/DragonsDen,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/AdmiralDanny/Desktop/DragonsDen/DragonsDen/Startup/DragonsDen-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DragonsDen/Startup/DragonsDen-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DragonsDen/Startup/DragonsDen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1077,11 +1096,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/AdmiralDanny/Desktop/DragonsDen,
+					"$(SRCROOT)/DragonsDen",
+					/Users/AdmiralDanny/Dropbox/DragonsDen,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/AdmiralDanny/Desktop/DragonsDen/DragonsDen/Startup/DragonsDen-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DragonsDen/Startup/DragonsDen-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DragonsDen/Startup/DragonsDen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

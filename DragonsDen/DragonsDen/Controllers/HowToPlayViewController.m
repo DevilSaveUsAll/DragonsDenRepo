@@ -7,6 +7,7 @@
 //
 
 #import "HowToPlayViewController.h"
+#import "Sound.h"
 
 @interface HowToPlayViewController ()
 
@@ -20,6 +21,7 @@
 }
 
 - (IBAction)close:(id)sender {
+  [[Sound sharedSound] playSoundEffect:kButtonClicking];
   [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

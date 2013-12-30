@@ -33,6 +33,7 @@ typedef enum {
   kNormal = 50,
   kMayhem,
   kArmor,
+  kNone,
 }PowerUpState;
 
 @interface Dragon : SKNode {

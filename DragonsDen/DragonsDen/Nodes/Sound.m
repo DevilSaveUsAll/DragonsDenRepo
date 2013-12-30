@@ -7,6 +7,7 @@
 //
 
 #import "Sound.h"
+#import "Definitions.h"
 
 @implementation Sound
 
@@ -106,6 +107,8 @@
 }
 
 - (void)playSoundEffect:(SoundType)type {
+  BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:Music];
+  if (musicOn == NO) return;
   NSString *fileName = @"";
   switch (type) {
     case kBatDeath:
@@ -125,7 +128,7 @@
       break;
       
     case kPowerDown:
-      fileName = @"Powerup PoweringDown";
+      fileName = @"Powerup PoweringDown.wav";
       break;
       
     case kPowerUp:
@@ -140,7 +143,16 @@
       fileName = @"SpeedBoost Sound.wav";
       break;
   }
-  [self runAction:[SKAction playSoundFileNamed:@"BatDeath.wav" waitForCompletion:NO]];
+  
+  NSURL *fileURL = [[NSBundle mainBundle] URLForResource:fileName withExtension:nil];
+  if (fileURL != nil)
+  {
+    SystemSoundID theSoundID;
+    OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileURL, &theSoundID);
+    if (error == kAudioServicesNoError)
+      soundID = theSoundID;
+  }  
+  AudioServicesPlaySystemSound(soundID);
 }
 
 #pragma mark AVAudioDelegate

@@ -8,9 +8,7 @@
 //
 
 #import "Coin.h"
-
-#define NORMAL_VALUE 100
-#define POT_VALUE 500
+#import "GameScene.h"
 
 @implementation Coin
 
@@ -19,7 +17,6 @@
     self.coinType = coinType;
     coinFrames = [frames copy];
     [self setUpFrames];
-
   }
   return self;
 }
@@ -35,10 +32,17 @@
     self.goldValue = POT_VALUE;
   }
   [self addChild:self.coin];
+  
+  self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.coin.size.width-5];
+  self.physicsBody.dynamic = NO;
+  self.physicsBody.categoryBitMask = DDColliderTypeCoin;
+  self.physicsBody.collisionBitMask = DDColliderTypeDragon;
+  self.physicsBody.contactTestBitMask = DDColliderTypeDragon;
+  
 }
 
 - (void)animateCoin {
-  [self.coin runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:coinFrames timePerFrame:0.05f resize:NO restore:YES]]withKey:@"Coin"];
+  [self.coin runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:coinFrames timePerFrame:0.05f resize:NO restore:YES]] withKey:@"Coin"];
 }
 
 @end

@@ -10,17 +10,13 @@
 #import "GameScene.h"
 #import "PauseScreen.h"
 #import "DeathScreen.h"
+#import "StatsHud.h"
 
 @interface GameViewController : UIViewController <GameSceneDelegate, PauseScreenDelegate>
 
 @property (nonatomic, strong) GameScene *gameScene;
 @property (nonatomic, strong) IBOutlet PauseScreen *pauseScreen;
-@property (nonatomic, strong) IBOutlet UILabel *distanceLabel;
-@property (nonatomic, strong) IBOutlet UILabel *goldLabel;
-@property (nonatomic, strong) IBOutlet UIButton *musicButton;
 
-- (IBAction)musicClicked:(id)sender;
-- (IBAction)pauseClicked:(id)sender;
 - (IBAction)useArmor:(id)sender;
 - (IBAction)useSlow:(id)sender;
 - (IBAction)useMayhem:(id)sender;

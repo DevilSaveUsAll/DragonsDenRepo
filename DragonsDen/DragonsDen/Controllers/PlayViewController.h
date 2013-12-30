@@ -17,5 +17,9 @@
 - (IBAction)getGold:(id)sender;
 - (IBAction)mainMenu:(id)sender;
 - (IBAction)startGame:(id)sender;
+- (IBAction)buySlow:(id)sender;
+- (IBAction)buyMayhem:(id)sender;
+- (IBAction)buyArmor:(id)sender;
+
 
 @end

@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) SKSpriteNode *batSprite;
 
+- (id)initWithBatFrames:(NSMutableArray *)Frames deathFrames:(NSMutableArray *)dFrames;
 - (void)death;
 
 @end

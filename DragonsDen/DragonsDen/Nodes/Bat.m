@@ -7,47 +7,29 @@
 //
 
 #import "Bat.h"
+#import "GameScene.h"
 
 @implementation Bat
 
-- (id)init {
+- (id)initWithBatFrames:(NSMutableArray *)frames deathFrames:(NSMutableArray *)dFrames {
   if ((self = [super init])) {
+    batFrames = frames;
+    deathFrames = dFrames;
     [self setUpFrames];
   }
   return self;
 }
 
 - (void)setUpFrames {
-  batFrames = [NSArray array];
-  deathFrames = [NSArray array];
- 
-  NSMutableArray *tempArray = [NSMutableArray array];
-  
-  SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"BatAnimation"];
-  NSUInteger numImage = atlas.textureNames.count;
-  for (int i = 0; i < numImage; i++) {
-    NSString *textureName = [NSString stringWithFormat:@"bat%0.4d",i];
-    SKTexture *temp = [atlas textureNamed:textureName];
-    [tempArray addObject:temp];
-  }
-  
-  batFrames = [tempArray copy];
-  
-  atlas = [SKTextureAtlas atlasNamed:@"Smoke"];
-  numImage = atlas.textureNames.count;
-  
-  tempArray = [NSMutableArray array];
-  
-  for (int i = 10; i < numImage; i++) {
-    NSString *textureName = [NSString stringWithFormat:@"smoke%0.4d",i];
-    SKTexture *temp = [atlas textureNamed:textureName];
-    [tempArray addObject:temp];
-  }
-  deathFrames = [tempArray copy];
-  
   self.batSprite = [SKSpriteNode spriteNodeWithTexture:batFrames[0]];
   [self addChild:self.batSprite];
+  self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.batSprite.size.width/2];
+  self.physicsBody.dynamic = NO;
+  self.physicsBody.categoryBitMask = DDColliderTypeBat;
+  self.physicsBody.collisionBitMask = DDColliderTypeDragon;
+  self.physicsBody.contactTestBitMask = DDColliderTypeDragon;
   
+  [self.batSprite runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:batFrames timePerFrame:0.03f resize:NO restore:YES]] withKey:@"batFlap"];
 }
 
 - (void)death {

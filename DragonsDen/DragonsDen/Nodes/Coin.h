@@ -13,6 +13,9 @@ typedef enum {
   kTypePot
 }CoinType;
 
+#define NORMAL_VALUE 100
+#define POT_VALUE 500
+
 @interface Coin : SKNode {
   NSArray *coinFrames;
 }

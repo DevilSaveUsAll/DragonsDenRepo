@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Definitions.h"
+#import "GCHelper.h"
+#import "DDIAPHelper.h"
 
 @implementation AppDelegate
 
@@ -24,6 +26,9 @@
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:First_Time];
     [[NSUserDefaults standardUserDefaults] synchronize];
   }
+  [[GCHelper sharedInstance] authenticateLocalUser];
+  [DDIAPHelper sharedInstance];
+
   
   return YES;
 }

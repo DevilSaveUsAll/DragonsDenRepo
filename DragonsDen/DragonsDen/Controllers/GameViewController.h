@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) GameScene *gameScene;
 @property (nonatomic, strong) IBOutlet PauseScreen *pauseScreen;
+@property (nonatomic, strong) IBOutlet UIImageView *tapToStart;
 
 - (IBAction)useArmor:(id)sender;
 - (IBAction)useSlow:(id)sender;

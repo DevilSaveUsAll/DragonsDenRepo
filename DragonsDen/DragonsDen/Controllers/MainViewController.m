@@ -25,12 +25,10 @@
 
 
 - (IBAction)playGame:(id)sender {
-
   [[Sound sharedSound] playSoundEffect:kButtonClicking];
   //preload texture
   [SKTexture preloadTextures:[self getPreloadedArray] withCompletionHandler:^{
-    BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:Music];
-    if (musicOn) [[Sound sharedSound] playNextSong];
+    
   }];
 }
 
@@ -119,10 +117,21 @@
 
 - (IBAction)highScore:(id)sender {
   [[Sound sharedSound] playSoundEffect:kButtonClicking];
+  GKGameCenterViewController *leaderboardController = [[GKGameCenterViewController alloc] init];
+  if (leaderboardController != NULL)
+  {
+
+    leaderboardController.gameCenterDelegate = self;
+    [self presentViewController:leaderboardController animated:YES completion:nil];
+  }
 }
 
 - (IBAction)howToPlay:(id)sender {
   [[Sound sharedSound] playSoundEffect:kButtonClicking];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)facebookLike:(id)sender {

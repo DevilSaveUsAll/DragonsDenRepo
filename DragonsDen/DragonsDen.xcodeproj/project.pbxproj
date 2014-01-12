@@ -11,9 +11,25 @@
 		061495C318588EE800F84200 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 061495C118588EE800F84200 /* Icon@2x.png */; };
 		061F118A185141E000618377 /* Foregrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F1189185141E000618377 /* Foregrounds.m */; };
 		061F11EE1851B9A100618377 /* Stalactite.png in Resources */ = {isa = PBXBuildFile; fileRef = 061F11E61851B9A100618377 /* Stalactite.png */; };
+		062AF8E71881D6E10053B4D2 /* DDIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 062AF8E61881D6E10053B4D2 /* DDIAPHelper.m */; };
 		063A376318614009001BC710 /* StatsHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 063A376218614009001BC710 /* StatsHud.m */; };
 		063A376B1862E702001BC710 /* CollisionRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 063A376A1862E702001BC710 /* CollisionRect.m */; };
 		0645FFAA185AA98600F51597 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0645FFA8185AA97100F51597 /* FacebookSDK.framework */; };
+		06548D1F187DED78006825FC /* taptobegin.png in Resources */ = {isa = PBXBuildFile; fileRef = 06548D1D187DED78006825FC /* taptobegin.png */; };
+		06548D20187DED78006825FC /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 06548D1E187DED78006825FC /* tutorial.png */; };
+		06548D22187E3F84006825FC /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06548D21187E3F84006825FC /* GameKit.framework */; };
+		06548D28187E45FA006825FC /* GCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06548D27187E45FA006825FC /* GCHelper.m */; };
+		06548D2A1880E618006825FC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06548D291880E618006825FC /* StoreKit.framework */; };
+		06548D2D1880EDBC006825FC /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06548D2C1880EDBC006825FC /* IAPHelper.m */; };
+		065AA28D1878A8D0009C85C9 /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065AA28C1878A8D0009C85C9 /* InAppPurchaseViewController.m */; };
+		065AA2961878AEF7009C85C9 /* 150,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA28F1878AEF7009C85C9 /* 150,000.png */; };
+		065AA2971878AEF7009C85C9 /* 2,000,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA2901878AEF7009C85C9 /* 2,000,000.png */; };
+		065AA2981878AEF7009C85C9 /* 25,000,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA2911878AEF7009C85C9 /* 25,000,000.png */; };
+		065AA2991878AEF7009C85C9 /* 350,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA2921878AEF7009C85C9 /* 350,000.png */; };
+		065AA29A1878AEF7009C85C9 /* 4,000,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA2931878AEF7009C85C9 /* 4,000,000.png */; };
+		065AA29B1878AEF7009C85C9 /* 750,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA2941878AEF7009C85C9 /* 750,000.png */; };
+		065AA29C1878AEF7009C85C9 /* 8,000,000.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA2951878AEF7009C85C9 /* 8,000,000.png */; };
+		065AA29E18796878009C85C9 /* BackBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AA29D18796878009C85C9 /* BackBtn.png */; };
 		065AFC2A183D549F00A04A02 /* BatAnimation.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD3183D549F00A04A02 /* BatAnimation.atlas */; };
 		065AFC2D183D549F00A04A02 /* Clock.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD8183D549F00A04A02 /* Clock.atlas */; };
 		065AFC2E183D549F00A04A02 /* ClockGlow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBD9183D549F00A04A02 /* ClockGlow.atlas */; };
@@ -32,8 +48,6 @@
 		065AFC3C183D549F00A04A02 /* ArmoredSpeed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBED183D549F00A04A02 /* ArmoredSpeed.atlas */; };
 		065AFC3D183D549F00A04A02 /* MayhemSpeed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBEE183D549F00A04A02 /* MayhemSpeed.atlas */; };
 		065AFC3E183D549F00A04A02 /* NormalSpeed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBEF183D549F00A04A02 /* NormalSpeed.atlas */; };
-		065AFC47183D549F00A04A02 /* HowToPlayScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBFA183D549F00A04A02 /* HowToPlayScreen@2x.png */; };
-		065AFC48183D549F00A04A02 /* XBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBFB183D549F00A04A02 /* XBtn@2x.png */; };
 		065AFC49183D549F00A04A02 /* DragonsDenTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBFD183D549F00A04A02 /* DragonsDenTitle@2x.png */; };
 		065AFC4A183D549F00A04A02 /* HighScoresBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBFE183D549F00A04A02 /* HighScoresBtn@2x.png */; };
 		065AFC4B183D549F00A04A02 /* HowToPlayBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 065AFBFF183D549F00A04A02 /* HowToPlayBtn@2x.png */; };
@@ -143,11 +157,31 @@
 		061F1188185141E000618377 /* Foregrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foregrounds.h; sourceTree = "<group>"; };
 		061F1189185141E000618377 /* Foregrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foregrounds.m; sourceTree = "<group>"; };
 		061F11E61851B9A100618377 /* Stalactite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stalactite.png; sourceTree = "<group>"; };
+		062AF8E51881D6E10053B4D2 /* DDIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDIAPHelper.h; sourceTree = "<group>"; };
+		062AF8E61881D6E10053B4D2 /* DDIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDIAPHelper.m; sourceTree = "<group>"; };
 		063A376118614009001BC710 /* StatsHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsHud.h; sourceTree = "<group>"; };
 		063A376218614009001BC710 /* StatsHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsHud.m; sourceTree = "<group>"; };
 		063A37691862E702001BC710 /* CollisionRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionRect.h; sourceTree = "<group>"; };
 		063A376A1862E702001BC710 /* CollisionRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionRect.m; sourceTree = "<group>"; };
 		0645FFA8185AA97100F51597 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		06548D1D187DED78006825FC /* taptobegin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taptobegin.png; sourceTree = "<group>"; };
+		06548D1E187DED78006825FC /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		06548D21187E3F84006825FC /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		06548D26187E45FA006825FC /* GCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHelper.h; sourceTree = "<group>"; };
+		06548D27187E45FA006825FC /* GCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHelper.m; sourceTree = "<group>"; };
+		06548D291880E618006825FC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		06548D2B1880EDBC006825FC /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		06548D2C1880EDBC006825FC /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		065AA28B1878A8D0009C85C9 /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseViewController.h; sourceTree = "<group>"; };
+		065AA28C1878A8D0009C85C9 /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseViewController.m; sourceTree = "<group>"; };
+		065AA28F1878AEF7009C85C9 /* 150,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "150,000.png"; sourceTree = "<group>"; };
+		065AA2901878AEF7009C85C9 /* 2,000,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2,000,000.png"; sourceTree = "<group>"; };
+		065AA2911878AEF7009C85C9 /* 25,000,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "25,000,000.png"; sourceTree = "<group>"; };
+		065AA2921878AEF7009C85C9 /* 350,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "350,000.png"; sourceTree = "<group>"; };
+		065AA2931878AEF7009C85C9 /* 4,000,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4,000,000.png"; sourceTree = "<group>"; };
+		065AA2941878AEF7009C85C9 /* 750,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "750,000.png"; sourceTree = "<group>"; };
+		065AA2951878AEF7009C85C9 /* 8,000,000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8,000,000.png"; sourceTree = "<group>"; };
+		065AA29D18796878009C85C9 /* BackBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackBtn.png; sourceTree = "<group>"; };
 		065AFBD3183D549F00A04A02 /* BatAnimation.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BatAnimation.atlas; sourceTree = "<group>"; };
 		065AFBD8183D549F00A04A02 /* Clock.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Clock.atlas; sourceTree = "<group>"; };
 		065AFBD9183D549F00A04A02 /* ClockGlow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ClockGlow.atlas; sourceTree = "<group>"; };
@@ -166,8 +200,6 @@
 		065AFBED183D549F00A04A02 /* ArmoredSpeed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ArmoredSpeed.atlas; sourceTree = "<group>"; };
 		065AFBEE183D549F00A04A02 /* MayhemSpeed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MayhemSpeed.atlas; sourceTree = "<group>"; };
 		065AFBEF183D549F00A04A02 /* NormalSpeed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = NormalSpeed.atlas; sourceTree = "<group>"; };
-		065AFBFA183D549F00A04A02 /* HowToPlayScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HowToPlayScreen@2x.png"; sourceTree = "<group>"; };
-		065AFBFB183D549F00A04A02 /* XBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "XBtn@2x.png"; sourceTree = "<group>"; };
 		065AFBFD183D549F00A04A02 /* DragonsDenTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DragonsDenTitle@2x.png"; sourceTree = "<group>"; };
 		065AFBFE183D549F00A04A02 /* HighScoresBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HighScoresBtn@2x.png"; sourceTree = "<group>"; };
 		065AFBFF183D549F00A04A02 /* HowToPlayBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HowToPlayBtn@2x.png"; sourceTree = "<group>"; };
@@ -290,6 +322,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06548D2A1880E618006825FC /* StoreKit.framework in Frameworks */,
+				06548D22187E3F84006825FC /* GameKit.framework in Frameworks */,
 				0645FFAA185AA98600F51597 /* FacebookSDK.framework in Frameworks */,
 				06D026C9185592D900CD0D11 /* UIKit.framework in Frameworks */,
 				06B47C8B1827292000843DFE /* CoreGraphics.framework in Frameworks */,
@@ -318,6 +352,21 @@
 				061495C118588EE800F84200 /* Icon@2x.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		065AA28E1878AEF7009C85C9 /* InApp */ = {
+			isa = PBXGroup;
+			children = (
+				065AA28F1878AEF7009C85C9 /* 150,000.png */,
+				065AA2901878AEF7009C85C9 /* 2,000,000.png */,
+				065AA2911878AEF7009C85C9 /* 25,000,000.png */,
+				065AA2921878AEF7009C85C9 /* 350,000.png */,
+				065AA2931878AEF7009C85C9 /* 4,000,000.png */,
+				065AA2941878AEF7009C85C9 /* 750,000.png */,
+				065AA2951878AEF7009C85C9 /* 8,000,000.png */,
+				065AA29D18796878009C85C9 /* BackBtn.png */,
+			);
+			path = InApp;
 			sourceTree = "<group>";
 		};
 		065AFBD2183D549F00A04A02 /* Bat */ = {
@@ -413,15 +462,6 @@
 				061F11E61851B9A100618377 /* Stalactite.png */,
 			);
 			path = ForegroundPieces;
-			sourceTree = "<group>";
-		};
-		065AFBF9183D549F00A04A02 /* HowToPlay */ = {
-			isa = PBXGroup;
-			children = (
-				065AFBFA183D549F00A04A02 /* HowToPlayScreen@2x.png */,
-				065AFBFB183D549F00A04A02 /* XBtn@2x.png */,
-			);
-			path = HowToPlay;
 			sourceTree = "<group>";
 		};
 		065AFBFC183D549F00A04A02 /* MainMenu */ = {
@@ -532,6 +572,8 @@
 				069B4BC5183EAB2B00701A1C /* MainViewController.m */,
 				069B4BC6183EAB2B00701A1C /* PlayViewController.h */,
 				069B4BC7183EAB2B00701A1C /* PlayViewController.m */,
+				065AA28B1878A8D0009C85C9 /* InAppPurchaseViewController.h */,
+				065AA28C1878A8D0009C85C9 /* InAppPurchaseViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -539,6 +581,8 @@
 		069B4BC8183EAB2B00701A1C /* Helper Classses */ = {
 			isa = PBXGroup;
 			children = (
+				06548D26187E45FA006825FC /* GCHelper.h */,
+				06548D27187E45FA006825FC /* GCHelper.m */,
 				06D026C51855926600CD0D11 /* FacebookManager.h */,
 				06D026C61855926600CD0D11 /* FacebookManager.m */,
 				069B4BCD183EAB2B00701A1C /* GameState.h */,
@@ -550,6 +594,10 @@
 				069B50931840022700B5AC8D /* FMMParallaxNode.h */,
 				069B50941840022700B5AC8D /* FMMParallaxNode.m */,
 				06678686185893AE003622D9 /* Definitions.h */,
+				06548D2B1880EDBC006825FC /* IAPHelper.h */,
+				06548D2C1880EDBC006825FC /* IAPHelper.m */,
+				062AF8E51881D6E10053B4D2 /* DDIAPHelper.h */,
+				062AF8E61881D6E10053B4D2 /* DDIAPHelper.m */,
 			);
 			path = "Helper Classses";
 			sourceTree = "<group>";
@@ -632,6 +680,8 @@
 		06B47C871827292000843DFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06548D291880E618006825FC /* StoreKit.framework */,
+				06548D21187E3F84006825FC /* GameKit.framework */,
 				0645FFA8185AA97100F51597 /* FacebookSDK.framework */,
 				06B47C881827292000843DFE /* Foundation.framework */,
 				06B47C8A1827292000843DFE /* CoreGraphics.framework */,
@@ -676,6 +726,9 @@
 		06B47CC81827296A00843DFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				06548D1D187DED78006825FC /* taptobegin.png */,
+				06548D1E187DED78006825FC /* tutorial.png */,
+				065AA28E1878AEF7009C85C9 /* InApp */,
 				06CD8158186B120A005F901B /* Coin */,
 				061495BF18588ED600F84200 /* Icons */,
 				06C9FD25183EB70E00AD70EB /* PlayMenu */,
@@ -683,7 +736,6 @@
 				065AFBD7183D549F00A04A02 /* DeathScreen */,
 				065AFBE0183D549F00A04A02 /* Dragon */,
 				065AFBF0183D549F00A04A02 /* ForegroundPieces */,
-				065AFBF9183D549F00A04A02 /* HowToPlay */,
 				065AFBFC183D549F00A04A02 /* MainMenu */,
 				065AFC03183D549F00A04A02 /* Map */,
 				065AFC0A183D549F00A04A02 /* Pause */,
@@ -811,7 +863,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065AA2991878AEF7009C85C9 /* 350,000.png in Resources */,
 				06CD815E186B1238005F901B /* Coin00@2x.png in Resources */,
+				06548D1F187DED78006825FC /* taptobegin.png in Resources */,
 				06CD8150186B0CDB005F901B /* Main_iPhone.storyboard in Resources */,
 				0667868818589802003622D9 /* Main_iPad.storyboard in Resources */,
 				065AFC5F183D549F00A04A02 /* Collecting Gold Sound.wav in Resources */,
@@ -819,10 +873,10 @@
 				065AFC64183D549F00A04A02 /* SpeedBoost Sound.wav in Resources */,
 				065AFC69183D549F00A04A02 /* Slow.atlas in Resources */,
 				065AFC34183D549F00A04A02 /* Particles.atlas in Resources */,
-				065AFC48183D549F00A04A02 /* XBtn@2x.png in Resources */,
 				065AFC33183D549F00A04A02 /* YouAreDead@2x.png in Resources */,
 				065AFC57183D549F00A04A02 /* PauseScreen@2x.png in Resources */,
 				06CA3F76183EABFA00DDB104 /* InfoPlist.strings in Resources */,
+				06548D20187DED78006825FC /* tutorial.png in Resources */,
 				06C9FD39183EB70E00AD70EB /* StartGameBtn@2x.png in Resources */,
 				065AFC6E183D549F00A04A02 /* PauseIcon@2x.png in Resources */,
 				065AFC3E183D549F00A04A02 /* NormalSpeed.atlas in Resources */,
@@ -833,6 +887,7 @@
 				06EC431D1852C53400D4675B /* Foreground1@2x.png in Resources */,
 				06C9FD37183EB70E00AD70EB /* SlowSpeedText1@2x.png in Resources */,
 				065AFC5B183D549F00A04A02 /* 08-Long Past Gone-Jami Sieber.wav in Resources */,
+				065AA2961878AEF7009C85C9 /* 150,000.png in Resources */,
 				065AFC4D183D549F00A04A02 /* MainMenuBtn@2x.png in Resources */,
 				065AFC52183D549F00A04A02 /* BG2_2@2x.png in Resources */,
 				065AFC53183D549F00A04A02 /* BlueBG@2x.png in Resources */,
@@ -850,6 +905,7 @@
 				06EC43211852C53400D4675B /* Foreground5@2x.png in Resources */,
 				065AFC51183D549F00A04A02 /* BG2_1@2x.png in Resources */,
 				061495C318588EE800F84200 /* Icon@2x.png in Resources */,
+				065AA2981878AEF7009C85C9 /* 25,000,000.png in Resources */,
 				065AFC65183D549F00A04A02 /* Armor.atlas in Resources */,
 				06C9FD35183EB70E00AD70EB /* MayhemEmeraldText2@2x.png in Resources */,
 				065AFC2E183D549F00A04A02 /* ClockGlow.atlas in Resources */,
@@ -861,6 +917,7 @@
 				065AFC39183D549F00A04A02 /* ArmoredGlide.atlas in Resources */,
 				06C9FD30183EB70E00AD70EB /* ArmoredText1@2x.png in Resources */,
 				065AFC3D183D549F00A04A02 /* MayhemSpeed.atlas in Resources */,
+				065AA2971878AEF7009C85C9 /* 2,000,000.png in Resources */,
 				06C9FD31183EB70E00AD70EB /* ArmoredText2@2x.png in Resources */,
 				065AFC55183D549F00A04A02 /* BlackTransparency@2x.png in Resources */,
 				065AFC4F183D549F00A04A02 /* BG1_1@2x.png in Resources */,
@@ -871,8 +928,10 @@
 				065AFC6B183D549F00A04A02 /* DistanceIcon@2x.png in Resources */,
 				065AFC3B183D549F00A04A02 /* NormalGlide.atlas in Resources */,
 				065AFC3C183D549F00A04A02 /* ArmoredSpeed.atlas in Resources */,
+				065AA29E18796878009C85C9 /* BackBtn.png in Resources */,
 				065AFC37183D549F00A04A02 /* MayhemFlap.atlas in Resources */,
 				065AFC6A183D549F00A04A02 /* SlowGlow.atlas in Resources */,
+				065AA29A1878AEF7009C85C9 /* 4,000,000.png in Resources */,
 				06C9FD32183EB70E00AD70EB /* GetGoldBtn@2x.png in Resources */,
 				065AFC68183D549F00A04A02 /* MayhemGlow.atlas in Resources */,
 				065AFC32183D549F00A04A02 /* Restart@2x.png in Resources */,
@@ -882,6 +941,7 @@
 				065AFC56183D549F00A04A02 /* MainMenu@2x.png in Resources */,
 				065AFC50183D549F00A04A02 /* BG1_2@2x.png in Resources */,
 				065AFC31183D549F00A04A02 /* FacebookShare@2x.png in Resources */,
+				065AA29C1878AEF7009C85C9 /* 8,000,000.png in Resources */,
 				065AFC4C183D549F00A04A02 /* Like Button@2x.png in Resources */,
 				06CD815B186B120A005F901B /* CoinNormal.atlas in Resources */,
 				065AFC5E183D549F00A04A02 /* ButtonClicking.wav in Resources */,
@@ -895,7 +955,7 @@
 				065AFC67183D549F00A04A02 /* Mayhem.atlas in Resources */,
 				06EC43221852C53400D4675B /* Foreground6@2x.png in Resources */,
 				065AFC5D183D549F00A04A02 /* BatDeath.wav in Resources */,
-				065AFC47183D549F00A04A02 /* HowToPlayScreen@2x.png in Resources */,
+				065AA29B1878AEF7009C85C9 /* 750,000.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,9 +974,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062AF8E71881D6E10053B4D2 /* DDIAPHelper.m in Sources */,
 				06CA3F72183EABFA00DDB104 /* AppDelegate.m in Sources */,
 				069B50951840022700B5AC8D /* FMMParallaxNode.m in Sources */,
+				065AA28D1878A8D0009C85C9 /* InAppPurchaseViewController.m in Sources */,
 				069B4BF6183EAB2B00701A1C /* Globals.m in Sources */,
+				06548D28187E45FA006825FC /* GCHelper.m in Sources */,
 				069B4BFC183EAB2B00701A1C /* Sound.m in Sources */,
 				063A376B1862E702001BC710 /* CollisionRect.m in Sources */,
 				069B4BF2183EAB2B00701A1C /* PlayViewController.m in Sources */,
@@ -926,6 +989,7 @@
 				069B4BFF183EAB2B00701A1C /* DeathScreen.m in Sources */,
 				069B4BFB183EAB2B00701A1C /* PowerUp.m in Sources */,
 				069B4C00183EAB2B00701A1C /* PauseScreen.m in Sources */,
+				06548D2D1880EDBC006825FC /* IAPHelper.m in Sources */,
 				06CA3F78183EABFA00DDB104 /* main.m in Sources */,
 				069B4BFD183EAB2B00701A1C /* GameScene.m in Sources */,
 				069B4BEA183EAB2B00701A1C /* HowToPlayViewController.m in Sources */,

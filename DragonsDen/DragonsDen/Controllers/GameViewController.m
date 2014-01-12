@@ -13,7 +13,9 @@
 #import "Sound.h"
 #import "GameState.h"
 #import "Coin.h"
-#import "Globals.h"
+#import <GameKit/GameKit.h>
+
+#define LEADERBOARD_ID @"DD_Leaderboard"
 
 @implementation GameViewController
 
@@ -68,6 +70,11 @@
   [self.gameScene speedTowardsDirection:kDirectionUp];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+  [self.gameScene start];
+  self.tapToStart.hidden = YES;
+}
+
 - (void)addHowToPlayScreen {
   UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
                                                 bundle:nil];
@@ -119,6 +126,18 @@
   [self.navigationController popToRootViewControllerAnimated:YES];
   BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"Music"];
   if (musicOn) [[Sound sharedSound] playMenuMusic];
+}
+
+- (void) reportHighScore:(NSInteger) highScore {
+  if ([GKLocalPlayer localPlayer].isAuthenticated) {
+    GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:LEADERBOARD_ID];
+    score.value = highScore;
+    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+      if (error) {
+        // handle error
+      }
+    }];
+  }
 }
 
 #pragma mark - Powerup Methods

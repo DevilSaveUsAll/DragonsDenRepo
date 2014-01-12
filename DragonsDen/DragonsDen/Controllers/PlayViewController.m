@@ -24,6 +24,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
   BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:Music];
   if (!musicOn) [self.musicButton setImage:[UIImage imageNamed:@"MusicNoteOFF.png"] forState:UIControlStateNormal];
   
@@ -125,6 +128,8 @@
 
 - (IBAction)startGame:(id)sender {
   [[Sound sharedSound] playSoundEffect:kButtonClicking];
+  BOOL musicOn = [[NSUserDefaults standardUserDefaults] boolForKey:Music];
+  if (musicOn) [[Sound sharedSound] playNextSong];
 }
 
 - (IBAction)buySlow:(id)sender {

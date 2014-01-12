@@ -15,5 +15,6 @@
 #define SlowCount @"Slow"
 #define MayhemCount @"Mayhem"
 #define First_Time @"First_Time"
+#define NO_ADS @"Ads"
 
 #endif

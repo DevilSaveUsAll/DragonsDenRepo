@@ -29,16 +29,14 @@
   CGSize winSize;
   CGFloat backgroundOneSpeed;
   CGFloat backgroundTwoSpeed;
-  DeathScreen *deathScreen;
   int foregroundSpeed;
   int previousSpeed;
   int postCount;
   
   float timeElapsed;
-  float idleTime;
+
   float slowDuration;
   
-  BOOL gliding;
   BOOL touched;
   BOOL speeding;
   BOOL slowed;
@@ -54,8 +52,12 @@
 }
 
 - (void)setUpPhysicsWorld {
-  self.physicsWorld.gravity = CGVectorMake(0, 0);
+  self.physicsWorld.gravity = CGVectorMake(0, -9.8);
   self.physicsWorld.contactDelegate = self;
+}
+
+- (void)disableGravity {
+  self.physicsWorld.gravity = CGVectorMake(0, 0.2);
 }
 
 - (void)setUpParallaxBG {
@@ -79,6 +81,13 @@
   
   SKSpriteNode *transparent = [[SKSpriteNode alloc] initWithImageNamed:@"TransparencyBG@2x.png"];
   [self addChild:transparent];
+}
+
+- (void)start {
+  self.dead = NO;
+  self.dragon.dragon.physicsBody.dynamic = YES;
+  [self setUpPhysicsWorld];
+  foregroundSpeed = INITIAL_FOREGROUND_SPEED;
 }
 
 - (void)setUpGame {
@@ -111,24 +120,18 @@
     [self.deathFrames addObject:temp];
   }
   
-  [self setUpPhysicsWorld];
   [self setUpParallaxBG];
   [self addForegroundPieces];
   
   self.dragon = [[Dragon alloc] init];
   [self setDragonStartingPosition];
-  self.dragon.dragon.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.dragon.dragon.size.width/2, self.dragon.dragon.size.height/2-10)];
-  self.dragon.dragon.physicsBody.dynamic = YES;
-  self.dragon.dragon.physicsBody.categoryBitMask = DDColliderTypeDragon;
-  self.dragon.dragon.physicsBody.collisionBitMask = DDColliderTypeBat | DDColliderTypeBat | DDColliderTypeForeground;
-  self.dragon.dragon.physicsBody.contactTestBitMask = DDColliderTypeForeground;
   self.flyingState = kFlapping;
   self.dragon.powerUpState = kNormal;
   [self addChild:self.dragon];
-  gliding = NO;
   
-  foregroundSpeed = INITIAL_FOREGROUND_SPEED;
+  foregroundSpeed = 0;
   previousSpeed = 0;
+  self.dead = YES;
   
   [self addStatsHud];
   self.statsHud = [[StatsHud alloc] init];
@@ -178,13 +181,11 @@
 }
 
 - (void)update:(NSTimeInterval)currentTime {
-  idleTime += 0.01;
   timeElapsed += 0.01;
   self.distance += 1;
   
-  if (idleTime > 1.0) {
-    [self glide];
-  }
+  if (touched) [self disableGravity];
+  else [self enableGravity];
   
   [self moveDistanceLabel];
   
@@ -227,22 +228,9 @@
   }
 }
 
-- (void)glide {
+- (void)enableGravity {
+  self.physicsWorld.gravity = CGVectorMake(0, -0.1);
   self.flyingState = kGliding;
-  if (!gliding) [self.dragon switchAnimation:self.flyingState];
-  else  self.dragon.position = CGPointMake(self.dragon.position.x, self.dragon.position.y-1);
-  gliding = YES;
-}
-
-- (void)pumpDragon {
-  if (self.dead) return;
-  gliding = NO;
-  idleTime = 0.0f;
-  self.flyingState = kFlapping;
-  [self.dragon switchAnimation:self.flyingState];
-  [self.dragon runAction:[SKAction moveToY:self.dragon.position.y+10 duration:0.2f] completion:^{
-    [self.dragon switchAnimation:kIdle];
-  }];
 }
 
 - (void)death {
@@ -260,15 +248,15 @@
 
 - (void)addDeathScreen {
   GameState *gs = [GameState sharedGameState];
-  deathScreen = [[DeathScreen alloc] initWithDistance:self.distance gold:gs.gold];
-  deathScreen.position = CGPointMake(winSize.width/2, winSize.height/2);
-  deathScreen.delegate = self;
-  [self addChild:deathScreen];
-}
-
-- (void)removeDeathScreen {
-  [deathScreen removeFromParent];
-  deathScreen.delegate = nil;
+  self.deathScreen = [[DeathScreen alloc] initWithDistance:self.distance gold:gs.gold];
+  self.deathScreen.position = CGPointMake(winSize.width/2, winSize.height/2);
+  self.deathScreen.delegate = self;
+  [self.scene addChild:self.deathScreen];
+  
+  if ([self.delegate respondsToSelector:@selector(reportHighScore:)]) {
+    [self.delegate reportHighScore:self.distance];
+  }
+  
 }
 
 - (void)mapSlow {
@@ -285,26 +273,31 @@
   touched = YES;
 }
 
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+  touched = NO;
+}
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-  if (touched) {
-    [self pumpDragon];
-  }
+  touched = NO;
 }
 
 - (void)speedTowardsDirection:(SwipeDirections)direction {
+  self.physicsWorld.gravity = CGVectorMake(0, 0);
   [[Sound sharedSound] playSoundEffect:kSpeedBoost];
   speeding = YES;
   self.flyingState = kSpeed;
-  idleTime = 0;
+
   [self.dragon switchAnimation:kSpeed];
   if (direction == kDirectionUp) {
     [self.dragon runAction:[SKAction moveToY:self.dragon.position.y+25 duration:0.3f] completion:^{
       speeding = NO;
+      [self enableGravity];
     }];
   }
   else if (direction == kDirectionRight) {
     [self.dragon runAction:[SKAction moveToX:self.dragon.position.x+25 duration:0.3f] completion:^{
       speeding = NO;
+      [self enableGravity];
     }];
   }
   else if (direction == kDirectiondiagonalDown) {
@@ -316,11 +309,13 @@
   else if (direction == kDirectionDown) {
     [self.dragon runAction:[SKAction moveToY:self.dragon.position.y-25 duration:0.3f] completion:^{
       speeding = NO;
+      [self enableGravity];
     }];
   }
   else if (direction == kDirectionLeft) {
     [self.dragon runAction:[SKAction moveToX:self.dragon.position.x-25 duration:0.3f] completion:^{
       speeding = NO;
+      [self enableGravity];
     }];
   }
 }
@@ -389,6 +384,7 @@
 
 - (void)continueGame {
   self.dead = NO;
+  [self.deathScreen removeFromParent];
 }
 
 - (void)restart {

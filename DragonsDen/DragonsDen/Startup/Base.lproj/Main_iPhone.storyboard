@@ -99,18 +99,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="HowToPlayScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="m0x-dL-dMZ">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="tutorial.png" translatesAutoresizingMaskIntoConstraints="NO" id="m0x-dL-dMZ">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2N-S1-MTs">
-                                <rect key="frame" x="532" y="4" width="27" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OQ-E1-Hoc">
+                                <rect key="frame" x="529" y="13" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="XBtn.png">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="close:" destination="TpW-0E-atG" eventType="touchUpInside" id="eXX-GZ-iXQ"/>
+                                    <action selector="close:" destination="TpW-0E-atG" eventType="touchUpInside" id="pL2-4A-YOK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,6 +127,162 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zp7-pE-8Fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1935" y="-175"/>
+        </scene>
+        <!--In App Purchase View Controller-->
+        <scene sceneID="0Sv-C8-a7v">
+            <objects>
+                <viewController id="POD-qT-oMp" customClass="InAppPurchaseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xc1-xb-VZF"/>
+                        <viewControllerLayoutGuide type="bottom" id="54N-kB-yO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TnO-Ue-eRO">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Coin00.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4d-IH-4tv">
+                                <rect key="frame" x="6" y="3" width="27" height="27"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLW-vz-xTW">
+                                <rect key="frame" x="36" y="6" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rW-SY-ZoZ">
+                                <rect key="frame" x="6" y="274" width="124" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="BackBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="POD-qT-oMp" eventType="touchUpInside" id="bpW-SH-ar3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekM-vV-Zjc">
+                                <rect key="frame" x="215" y="274" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="25,000,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppSeven:" destination="POD-qT-oMp" eventType="touchUpInside" id="kf4-OQ-S8r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkL-Ai-PTG">
+                                <rect key="frame" x="215" y="230" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="8,000,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppSix:" destination="POD-qT-oMp" eventType="touchUpInside" id="R8z-ZM-ew7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-PZ-CA9">
+                                <rect key="frame" x="215" y="186" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="4,000,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppFive:" destination="POD-qT-oMp" eventType="touchUpInside" id="rUj-ji-gHW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Y-nF-XgA">
+                                <rect key="frame" x="215" y="142" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="2,000,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppFour:" destination="POD-qT-oMp" eventType="touchUpInside" id="3p8-DM-SDZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-zM-nFz">
+                                <rect key="frame" x="215" y="98" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="750,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppThree:" destination="POD-qT-oMp" eventType="touchUpInside" id="2LS-U1-oJY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAc-vS-KHK">
+                                <rect key="frame" x="215" y="54" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="350,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppTwo:" destination="POD-qT-oMp" eventType="touchUpInside" id="gKl-zq-vpG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-NR-Vfk">
+                                <rect key="frame" x="215" y="10" width="295" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="150,000.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAppOne:" destination="POD-qT-oMp" eventType="touchUpInside" id="l4d-8I-SxO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-RY-Y0M">
+                                <rect key="frame" x="515" y="-6" width="57" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MusicNoteON.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="musicTouched:" destination="POD-qT-oMp" eventType="touchUpInside" id="fhl-m3-R34"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9IE-PZ-LO5">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81P-il-CBz">
+                                        <rect key="frame" x="144" y="87" width="284" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ato-cL-fIz">
+                                                <rect key="frame" x="18" y="43" width="249" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="okK-ls-AQc">
+                                                <rect key="frame" x="124" y="84" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CLy-fm-tvS"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="goldLabel" destination="lLW-vz-xTW" id="QTG-Mq-rMy"/>
+                        <outlet property="loadingView" destination="9IE-PZ-LO5" id="bkT-2K-OHi"/>
+                        <outlet property="musicButton" destination="8gi-RY-Y0M" id="7Qu-Ag-jDG"/>
+                        <outlet property="spinner" destination="okK-ls-AQc" id="db6-or-ByA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NbJ-ya-7x5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328" y="882"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="y80-zi-4Wq">
@@ -178,6 +335,10 @@
                                     <action selector="useMayhem:" destination="Y7l-Dy-Wcy" eventType="touchUpInside" id="wuI-en-b3a"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="taptobegin.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1H-vX-JfU">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -189,6 +350,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="pauseScreen" destination="onb-x7-3R5" id="Vr0-15-UAb"/>
+                        <outlet property="tapToStart" destination="G1H-vX-JfU" id="hEu-Hw-7Ys"/>
                         <outlet property="view" destination="hVE-LF-pRa" id="Hs9-WG-6Rw"/>
                     </connections>
                 </viewController>
@@ -294,7 +456,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85y-sJ-fIk">
-                                <rect key="frame" x="213" y="224" width="143" height="46"/>
+                                <rect key="frame" x="220" y="231" width="143" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="GetGoldBtn.png">
@@ -302,6 +464,7 @@
                                 </state>
                                 <connections>
                                     <action selector="getGold:" destination="ikE-Ff-g5Y" eventType="touchUpInside" id="oPd-3S-Ol8"/>
+                                    <segue destination="POD-qT-oMp" kind="push" id="M4q-Jp-cLg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-oA-kkB">
@@ -456,8 +619,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="150,000.png" width="1179" height="145"/>
+        <image name="2,000,000.png" width="1184" height="145"/>
+        <image name="25,000,000.png" width="1184" height="145"/>
+        <image name="350,000.png" width="1191" height="145"/>
+        <image name="4,000,000.png" width="1184" height="145"/>
+        <image name="750,000.png" width="1184" height="145"/>
+        <image name="8,000,000.png" width="1184" height="145"/>
         <image name="ArmoredText1.png" width="150" height="30"/>
         <image name="ArmoredText2.png" width="150" height="30"/>
+        <image name="BackBtn.png" width="496" height="145"/>
         <image name="BlackTransparency.png" width="568" height="320"/>
         <image name="Coin00.png" width="27" height="27"/>
         <image name="Coin00@2x.png" width="568" height="320"/>
@@ -465,7 +636,6 @@
         <image name="GetGoldBtn.png" width="143" height="46"/>
         <image name="HighScoresBtn.png" width="166" height="37"/>
         <image name="HowToPlayBtn.png" width="166" height="37"/>
-        <image name="HowToPlayScreen.png" width="568" height="320"/>
         <image name="Like Button.png" width="75" height="39"/>
         <image name="MainMenu.png" width="162" height="36"/>
         <image name="MainMenuBtn.png" width="166" height="54"/>
@@ -479,7 +649,8 @@
         <image name="SlowSpeedText1.png" width="150" height="30"/>
         <image name="SlowSpeedText2.png" width="150" height="30"/>
         <image name="StartGameBtn.png" width="138" height="40"/>
-        <image name="XBtn.png" width="28" height="28"/>
+        <image name="taptobegin.png" width="1136" height="640"/>
+        <image name="tutorial.png" width="1136" height="640"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>

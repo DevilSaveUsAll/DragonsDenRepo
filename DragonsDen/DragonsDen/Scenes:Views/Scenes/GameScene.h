@@ -44,6 +44,7 @@ typedef enum : uint8_t {
 - (void)restartGame;
 - (void)showPopUp:(PopUpType)type;
 - (void)pauseGame;
+- (void)reportHighScore:(NSInteger) highScore;
 
 @end
 
@@ -65,6 +66,8 @@ typedef enum : uint8_t {
 @property (nonatomic, strong) NSMutableArray *batFrames;
 @property (nonatomic, strong) NSMutableArray *deathFrames;
 @property (nonatomic, strong) StatsHud *statsHud;
+@property (nonatomic, strong) DeathScreen *deathScreen;
+
 
 - (void)pauseGame;
 - (void)resumeGame;
@@ -72,6 +75,7 @@ typedef enum : uint8_t {
 - (void)useArmor;
 - (void)useSlow;
 - (void)useMayhem;
+- (void)start;
 
 - (void)speedTowardsDirection:(SwipeDirections)direction;
 

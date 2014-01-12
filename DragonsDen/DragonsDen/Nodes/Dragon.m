@@ -8,6 +8,7 @@
 
 #import "Dragon.h"
 #import "Globals.h"
+#import "GameScene.h"
 
 @implementation Dragon
 
@@ -22,6 +23,12 @@
     self.dragon = [SKSpriteNode spriteNodeWithTexture:temp];
     self.name = @"Dragon";
     [self addChild:self.dragon];
+    
+    self.dragon.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.dragon.size.width/2, self.dragon.size.height/2-10)];
+    self.dragon.physicsBody.dynamic = NO;
+    self.dragon.physicsBody.categoryBitMask = DDColliderTypeDragon;
+    self.dragon.physicsBody.collisionBitMask = DDColliderTypeBat | DDColliderTypeBat | DDColliderTypeForeground;
+    self.dragon.physicsBody.contactTestBitMask = DDColliderTypeForeground;
     
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"Smoke"];
     NSUInteger numImage = atlas.textureNames.count;
